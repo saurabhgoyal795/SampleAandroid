@@ -1,0 +1,52 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="10dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_selector_transparent_5_black">
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:layout_centerInParent="true"
+                android:tint="@color/ca_blue"
+                android:alpha=".2"
+                android:src="@drawable/book_place_holder" />
+            <ImageView
+                android:id="@+id/planImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/planText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2B3E50"
+            android:gravity="center_horizontal"
+            android:text="CLASS ROOM TEST SERIES - 2020"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

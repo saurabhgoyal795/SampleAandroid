@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "986599537667",
+    "project_id": "zonetech-ots",
+    "storage_bucket": "zonetech-ots.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986599537667:android:5ce56a03d419ec9811a236",
+        "android_client_info": {
+          "package_name": "com.zonetech.online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986599537667-7cvkrn6etfni4bl5dk35m5mqgul498kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMFAf7tpiX916eptOfbtp5AKuFGQqroKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986599537667-7cvkrn6etfni4bl5dk35m5mqgul498kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

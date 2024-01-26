@@ -1,0 +1,41 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="false" >
+		<layer-list>
+			<item android:left="0dp" android:top="3dp" >
+				<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+					<corners android:radius="10dp" />
+					<gradient
+						android:startColor="#33000000"
+						android:endColor="#00000000"
+						android:centerColor="#33000000"
+						android:centerY=".95"
+						android:angle="270" />
+				</shape>
+			</item>
+
+			<item android:right="0dp" android:bottom="3dp">
+				<shape android:padding="10dp" android:shape="oval">
+					<gradient android:startColor="@color/ca_green_10_lighter" android:endColor="@color/ca_green_10_lighter" android:angle="90"/>
+					<corners android:radius="10dp" />
+				</shape>
+			</item>
+		</layer-list>
+	</item>
+	<item android:state_pressed="true" >
+		<layer-list>
+			<item android:left="0dp" android:top="3dp">
+				<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+					<corners android:radius="10dp" />
+					<solid android:color="@color/transparent" />
+				</shape>
+			</item>
+
+			<item android:right="0dp" android:bottom="3dp" >
+				<shape android:padding="10dp" android:shape="oval">
+					<gradient android:startColor="@color/ca_green_20_lighter" android:endColor="@color/ca_green_20_lighter" android:angle="90"/>
+					<corners android:radius="10dp" />
+				</shape>
+			</item>
+		</layer-list>
+	</item>
+</selector>

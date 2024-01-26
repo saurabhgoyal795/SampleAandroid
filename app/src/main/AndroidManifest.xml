@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zonetech.online"
+    android:installLocation="auto">
+    <uses-sdk tools:overrideLibrary="com.payumoney.sdkui,com.payumoney.core,com.payu.upisdk,
+    com.payumoney.graphics,com.payu.checkoutpro,com.payu.phonepe,com.payu.gpay,com.payu.otpassist,
+    com.payu.custombrowser,com.payu.ui,com.payu.assetprovider,com.payu.olamoney,
+    com.payu.socketverification,com.payu.otpparser,com.payu.payuanalytics,com.payu.base,
+    com.payu.india,com.payu.crashlogger,com.payu.paymentparamhelper" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup, android:theme"
+        android:hardwareAccelerated="true">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/red"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id"/>
+        <activity
+            android:name=".ContactUsActivity"
+            android:label="@string/title_activity_contact_us"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"></activity>
+        <activity
+            android:name=".mypackage.onlineClass.MyPackageClassDetailsActivity"
+            android:label="@string/title_activity_my_package_class_details"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+
+        <activity
+            android:name=".freecourses.FreeCoursesActivity"
+            android:label="Free Packages"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen.Launcher"
+            android:exported="true"
+            android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InitialScreenActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".home.MainActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".testseries.TestSeriesPlanActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_test_series_pan"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".publication.PublicationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Publications"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".news.NewsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Latest News"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".offers.OfferActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Latest Offers"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".classes.SubjectsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Latest News"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".profile.TransactionActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="My Transactions"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Notifications"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".publication.PublicationCategoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_test_series_pan"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/profile"
+            android:parentActivityName=".home.MainActivity"
+            android:theme="@style/AppTheme.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".profile.NewProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/profile"
+            android:parentActivityName=".home.MainActivity"
+            android:theme="@style/AppTheme.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".publication.PublicationDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".classes.ClassPackagePlanActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_class_series_pan"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".testseries.TestPackageDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:parentActivityName=".testseries.TestSeriesPlanActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".testseries.TestSeriesPlanActivity" />
+        </activity>
+        <activity
+            android:name=".classes.ClassPackageDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="false"
+            android:parentActivityName=".classes.ClassPackagePlanActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".classes.ClassPackagePlanActivity" />
+        </activity>
+        <activity
+            android:name=".freecourses.FreeClassPackageDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".freecourses.FreeTestPackageDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+
+        <activity
+            android:name=".mypackage.MyPackageActivity"
+            android:label="@string/title_activity_my_package"
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".mypackage.onlineClass.MyPackageClassVideoActivity"
+            android:label="@string/title_activity_my_package"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".utils.PdfOpenActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".payment.CartActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/payment_confirmation"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".payment.RenewPackageActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/payment_confirmation"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".mypackage.onlineClass.ClassVideoListActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".player.PlayerActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|navigation"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".mypackage.onlineTestSeries.TestSeriesDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".mypackage.onlineTestSeries.test.TestResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".player.WebVideoPlayer"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".mypackage.onlineTestSeries.test.TestActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".mypackage.onlineTestSeries.test.TestSolutionActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".common.CommonWebViewActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"
+            android:parentActivityName=".home.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".common.CommonWebViewActivity2"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        
+        <activity
+            android:name=".home.WelcomeActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen.Transparent" />
+        <activity
+            android:name=".home.LogoutActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen.Transparent" />
+        <activity
+            android:name=".cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".dailyQuiz.DailyQuizActvity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".mypackage.onlineClass.QueryActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.NoActionBar.Transparent"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".downloads.MyDownloadActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="false"
+            android:label="My Downloads"/>
+        <activity
+            android:name=".downloads.DownloadFileListActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="false"
+            android:label="My Downloads"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zonetech.online"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <activity
+            android:name=".player.YoutubePlayerActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+
+        <activity
+            android:name=".offers.OfferDialogActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen.Transparent" />
+        <service android:name=".notification.ZTFirebaseMessagingService"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.zonetech.online.server.DeepLinkActivity"
+            android:configChanges="orientation|screenSize|keyboard|uiMode"
+            android:parentActivityName="com.zonetech.online.home.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.MainActivity" />
+
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="zonetech.in"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="zonetech.in"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".server.UpdateActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"/>
+    </application>
+
+</manifest>

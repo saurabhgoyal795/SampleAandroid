@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:id="@+id/radioButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_radio_button_unchecked_black_24"
+            android:visibility="invisible"
+            android:tint="@color/ca_blue"
+            android:alpha=".7"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_toRightOf="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <com.zonetech.online.views.ZTWebView
+                android:id="@+id/optionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/radioButton"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/answerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:background="@color/red"
+        android:padding="4dp"
+        android:text="Your Answer"
+        android:visibility="gone"
+        android:textSize="10sp"/>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    android:elevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_transparent_5_black">
+
+        <com.zonetech.online.views.ZTWebView
+            android:id="@+id/planText"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scrollbars="none"/>
+        <TextView
+            android:id="@+id/newsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ca_blue"
+            android:alpha=".54"
+            android:text="News Date: 26/05/2020"
+            android:textSize="14sp"
+            android:layout_below="@+id/planText"
+            android:maxLines="2"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:layout_marginRight="16dp"/>
+        <TextView
+            android:id="@+id/viewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0000FF"
+            android:alpha=".87"
+            android:text="View Detail"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/planText"
+            android:maxLines="2"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

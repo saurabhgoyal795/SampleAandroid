@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary" >
+
+        <RelativeLayout
+            android:id="@+id/backIcon"
+            android:layout_width="56dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/backIcon"
+            android:text="Edit Image"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/leftrotateImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/rightrotateImage"
+            android:src="@drawable/ic_rotate_left_white_24dp" />
+        <ImageView
+            android:id="@+id/rightrotateImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/cropImage"
+            android:src="@drawable/ic_rotate_right_white_24dp" />
+        <TextView
+            android:id="@+id/cropImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="CROP"
+            android:background="@drawable/button_white_rounded"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <com.zonetech.online.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_below="@+id/topHeader"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/shadowheader"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/topHeader"
+        android:background="@drawable/shadow_header"
+        android:orientation="horizontal" />
+</RelativeLayout>

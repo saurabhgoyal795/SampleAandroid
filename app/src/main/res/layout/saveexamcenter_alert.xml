@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popupView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="#fff"
+    app:cardElevation="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exam Details"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roll Number"
+                    android:textSize="14sp"
+                    android:textColor="@color/ca_blue"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/rollNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter roll number"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/edit_box_style"
+                android:minHeight="36dp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Exam Center"
+                    android:textColor="@color/ca_blue"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/examCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Exam Center"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/edit_box_style"
+                android:singleLine="true"
+                android:minHeight="36dp"
+                android:imeOptions="actionNext"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Date of Birth(dd/mm/yyyy)"
+                    android:textColor="@color/ca_blue"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter dob example: 12/10/1995"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/edit_box_style"
+                android:minHeight="36dp"
+                android:singleLine="true"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="date"
+                android:imeOptions="actionNext"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+            <RelativeLayout
+                android:id="@+id/uploadImageLayout"
+                android:layout_width="120dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/uploadImageView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:id="@+id/clearUploadImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_cancel_white_24"
+                    app:tint="@color/red"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/buttonLoadPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Upload Admit Card"
+                android:background="@drawable/button_green_rounded_4dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:id="@+id/submitButton"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_blue_rounded"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:foreground="@drawable/list_selector_transparent_5_black"
+                    android:paddingTop="10dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="SUBMIT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/whatsapp"
+        android:icon="@drawable/whatsapp"
+        android:title="@string/cart"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/cart_icon"
+        android:title="@string/cart"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_account_circle_white_18"
+        android:title="@string/mydownloads"
+        app:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/home_notification_icon"
+        android:title="@string/notification"
+        app:showAsAction="always" />
+</menu>

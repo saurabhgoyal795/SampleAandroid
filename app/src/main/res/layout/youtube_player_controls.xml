@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/rootPopupView"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="240dp">
+        <ImageButton
+            android:id="@+id/yt_rew"
+            style="@style/ExoMediaButton.Rewind"
+            android:tint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"/>
+        <ImageButton
+            android:id="@+id/yt_ffwd"
+            style="@style/ExoMediaButton.FastForward"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"/>
+
+        <ImageButton android:id="@+id/yt_playPause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/exo_icon_pause"
+            android:background="@drawable/circle_black_10"/>
+        <LinearLayout
+            android:id="@+id/yt_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/yt_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/yt_progress"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/yt_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/yt_fullscreen_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:visibility="visible"
+                android:src="@drawable/fullscreen_white_18dp"/>
+            <ImageView
+                android:id="@+id/yt_setting"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="8dp"
+                android:visibility="visible"
+                android:src="@drawable/baseline_settings_white_18"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

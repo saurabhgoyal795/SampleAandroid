@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath 'com.google.gms:google-services:4.3.8'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.6.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"}
+    }
+}
+ext.getSecretProperty = { key, defaultValue ->
+    def value = System.getenv(key)
+
+    if (value == null) {
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').exists()) {
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            value = properties.getProperty(key)
+        }
+    }
+
+    if (value == null) {
+        value = defaultValue
+    }
+
+    return value
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+        <include layout="@layout/activity_main" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <include layout="@layout/nav_header_main"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/nav_header"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/shadow_bottom"
+                android:layout_above="@id/versionText"/>
+            <ExpandableListView
+                android:id="@+id/list_slidermenu"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_below="@+id/nav_header"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:layout_above="@+id/versionText"
+                android:groupIndicator="@null" >
+            </ExpandableListView>
+            <TextView
+                android:id="@+id/versionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Version:1.4.1"
+                android:padding="5dp"
+                android:textColor="@color/ca_blue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:alpha=".54"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

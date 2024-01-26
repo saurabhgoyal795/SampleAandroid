@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		100% — FF 95% — F2 90% — E6 85% — D9 80% — CC 75% — BF 70% — B3
+		65% — A6 60% — 99 55% — 8C 50% — 80 45% — 73 40% — 66 35% — 59
+		30% — 4D 25% — 40 20% — 33 15% — 26 10% — 1A 5% — 0D 0% — 00
+	-->
+<resources>
+    <color name="colorPrimary">#c22526</color>
+    <color name="colorPrimaryDark">#c22526</color>
+    <color name="colorAccent">#80c22526</color>
+    <color name="ca_green_20_darker">#FF3ba38d</color>
+    <color name="ca_green_10_darker">#FF42B59D</color>
+    <color name="ca_green_5_darker">#FF45BFA6</color>
+    <color name="ca_green">#FF49C9AF</color>
+    <color name="ca_green_hover">#FF53E7C9</color>
+    <color name="ca_green_5_lighter">#FF52CCB3</color>
+    <color name="ca_green_10_lighter">#FF5CCFB7</color>
+    <color name="ca_green_20_lighter">#FF76E9D1</color>
+    <color name="ca_green_50_lighter">#5976E9D1</color>
+    <color name="grey_a">#FFAAAAAA</color>
+    <color name="ca_blue">#FF2B3E50</color>
+    <color name="white_alpha_90">#E6FFFFFF</color>
+    <color name="white_alpha_70">#B3FFFFFF</color>
+    <color name="white_alpha_10">#26FFFFFF</color>
+    <color name="white">#ffffffff</color>
+    <color name="colorPrimary_50">#80c33235</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_10">#80000000</color>
+    <color name="ca_yellow">#FFF8CE46</color>
+    <color name="red">#FFFE5C57</color>
+    <color name="ca_blue_10_lighter">#FF415262</color>
+    <color name="grey_d">#FFDDDDDD</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#F0F014</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="backgroundColor">#1Ac22526</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="blue">#FF1784C7</color>
+    <color name="emi_tenure_select_row_bg">#f2f2f2</color>
+    <color name="add_amount_grey">#A9A9A9</color>
+    <color name="orange">#c56100</color>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/player"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"></com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/videoControllersLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_alignParentBottom="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha=".4"
+                            android:background="@color/black_10">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:paddingBottom="0dp">
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="00:00:00"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:id="@+id/progressBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@+id/tvTotalDuration"
+                                android:layout_toRightOf="@+id/tvCurrentPlay"
+                                android:progress="0" />
+
+                            <TextView
+                                android:id="@+id/tvTotalDuration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:padding="10dp"
+                                android:text="00:00:00"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp">
+
+                            <ImageView
+                                android:id="@+id/ivBackForward"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/backword_icon"
+                                android:backgroundTint="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/ivPlayPause"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="25dp"
+                                android:layout_toRightOf="@+id/ivBackForward"
+                                android:backgroundTint="@color/white"
+                                android:padding="7dp" />
+
+                            <ImageView
+                                android:id="@+id/ivFastForward"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/ivPlayPause"
+                                android:background="@mipmap/video_fast_forwrd_icon"
+                                android:backgroundTint="@color/white"
+                                android:padding="10dp" />
+
+                            <ImageView
+                                android:id="@+id/ivSpeedMeeter"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@+id/ivSetting"
+                                android:background="@mipmap/speedometer"
+                                android:padding="10dp" />
+
+                            <ImageView
+                                android:id="@+id/ivSetting"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toLeftOf="@+id/ivFullScreen"
+                                android:background="@mipmap/setting_icon"
+                                android:backgroundTint="@color/white"
+                                android:padding="10dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/ivFullScreen"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/fullscreen_exit_white_18dp"/>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBarLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

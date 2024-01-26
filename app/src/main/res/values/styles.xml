@@ -1,0 +1,122 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.FullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="cardItem">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen.Launcher" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen.Transparent" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar.Transparent" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Toolbar.TitleText.collapsed" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText.expanded" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+    <style name="YouTubePlayerTheme" parent="Theme.AppCompat">
+        <item name="android:popupWindowStyle">@style/YouTubePlayerControlsWindowStyle</item>
+        <item name="imageButtonStyle">@style/YouTubePlayerControlsButtonStyle</item>
+        <item name="android:textViewStyle">@style/YouTubePlayerControlsTextStyle</item>
+        <item name="android:seekBarStyle">@style/YouTubePlayerControlsSeekBarStyle</item>
+        <!-- Sets the tint for thumb on SeekBar for pre-Lollipop devices -->
+        <item name="colorAccent">@android:color/white</item>
+        <!-- Sets the tint of the background of the SeekBar scrubber for pre-Lollipop devices -->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <!-- Style for overall controls window -->
+    <style name="YouTubePlayerControlsWindowStyle" parent="Widget.AppCompat.PopupWindow">
+        <item name="android:popupBackground">@color/transparent</item>
+        <item name="android:popupAnimationStyle">@style/YouTubePlayerControlsAnimation</item>
+    </style>
+
+    <!-- Style for play/pause/replay button -->
+    <style name="YouTubePlayerControlsButtonStyle" parent="Widget.AppCompat.ImageButton">
+        <!-- Must specify both platform and AppCompat attrs. -->
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:tint">@color/transparent</item>
+    </style>
+
+    <!-- Style for timestamp text -->
+    <style name="YouTubePlayerControlsTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Style for scrubber if you want to do more than tint pre-Lollipop -->
+    <style name="YouTubePlayerControlsSeekBarStyle" parent="Widget.AppCompat.SeekBar">
+    </style>
+
+    <style name="YouTubePlayerControlsAnimation">
+        <item name="android:windowEnterAnimation">@anim/youtube_player_controls_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/youtube_player_controls_fade_out</item>
+    </style>
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

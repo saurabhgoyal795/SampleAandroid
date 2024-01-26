@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">ZONE TECH</string>
+    <string name="proceed">Proceed</string>
+    <string name="singup">New Registration</string>
+    <string name="singin">Sign In</string>
+    <string name="already_account">Sign In</string>
+    <string name="otp_send">Sending OTP...</string>
+    <string name="otp_submit">Submit OTP</string>
+    <string name="email_title">Email</string>
+    <string name="password_title">Password</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="register_newUser">New Registration</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test_series_pan">Online Test Series</string>
+    <string name="title_activity_class_series_pan">Online Classes</string>
+    <string name="tab_personal_details">Personal Details</string>
+    <string name="tab_additional_details">Additional Details</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="currency">₹</string>
+    <string name="price_value">%1$s %2$s (%3$s off)</string>
+    <string name="title_activity_my_package">My Packages</string>
+    <string name="tab_text_1">MY ONLINE CLASSES</string>
+    <string name="tab_text_2">MY OTS</string>
+    <string name="tab_text_3">FREE ONLINE CLASSES</string>
+    <string name="tab_text_4">FREE OTS</string>
+    <string name="network_error_1">Unable to connect, please check your internet connection and try again</string>
+    <string name="payment_confirmation">Payment Confirmation</string>
+    <string name="total_amount">Total Amount: %1$s</string>
+    <string name="discount">Discount: %1$s(%2$s)</string>
+    <string name="amount">Amount: %1$s</string>
+    <string name="gst">GST (%1$s): %2$s</string>
+    <string name="pay_amount">Amount to Pay: %1$s</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="cart_price">%1$s %2$s (%3$s Off)</string>
+    <string name="no_cart_item">Your cart is empty</string>
+    <string name="downloading_progress">Downloading...(%1$s)</string>
+    <string name="title_activity_my_package_class_details">MyPackageClassDetailsActivity</string>
+    <string name="cart">Cart</string>
+    <string name="profile">My Profile</string>
+    <string name="mydownloads">My Downloads</string>
+    <string name="notification">Notification</string>
+    <string name="active">Active</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="completed">Completed</string>
+    <string name="missed_test">Missed</string>
+    <string name="no_test_item">No %1$s tests</string>
+    <string name="view_solution">View solution</string>
+    <string name="exam_duration">%1$d Minutes</string>
+    <string name="negativeMarks">Yes, Formula: %1$s</string>
+    <string name="start_exam">Start Exam</string>
+    <string name="resume_exam">Resume Exam</string>
+    <string name="submit">Submit</string>
+    <string name="close">Close</string>
+    <string name="result">Result</string>
+    <string name="instruction">Instructions</string>
+    <string name="attempted">%1$d Question(s)</string>
+    <string name="missed">%1$d Question(s)</string>
+    <string name="per_question_time">%1$s Minute(s)</string>
+    <string name="time_spent">%1$s Minute(s)</string>
+    <string name="exam_submitted">Exam submitted successfully!</string>
+    <string name="exam_submitted_msg">Detailed exam static for Exam %1$s is available on result dashboard! Please navigate through button below.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home">Home</string>
+    <string name="aboutus">About us</string>
+    <string name="mycart">My Cart</string>
+    <string name="student_corner">Student Corner</string>
+    <string name="student_corner_downloads">Downloads</string>
+    <string name="student_corner_job">Job Notifications</string>
+    <string name="student_corner_submitResult">Submit result</string>
+    <string name="student_corner_Interview_Preparations">Interview Preparations</string>
+    <string name="student_corner_ZT_Blog">ZT  Blog</string>
+    <string name="our_achievments">Our Achievements</string>
+    <string name="our_achievments_Selections">Selections</string>
+    <string name="our_achievments_Testimonials">Testimonials</string>
+    <string name="share_app">Share the App</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="follow_us_Facebook">Facebook</string>
+    <string name="follow_us_Telegram">Telegram</string>
+    <string name="follow_us_Youtube">Youtube</string>
+    <string name="follow_us_Instagram">Instagram</string>
+    <string name="follow_us_Linkedin">Linkedin</string>
+    <string name="contact_us">Contact us</string>
+    <string-array name="nav_drawer_items">
+        <item>My Profile</item>
+        <item>About us</item>
+        <item>Claim Promo Code</item>
+        <item>Payment History</item>
+        <item>Offers</item>
+        <item>News</item>
+        <item>Student Corner</item>
+        <item>Our Achievements</item>
+        <item>Share the App</item>
+        <item>Follow Us</item>
+        <item>Contact us</item>
+        <item>LogOut</item>
+    </string-array>
+    <string-array name="student_corner_array">
+        <item>Downloads</item>
+        <item>Job Notifications</item>
+        <item>Submit result</item>
+        <item>Interview Preparations</item>
+        <item>ZT Blog</item>
+    </string-array>
+    <string-array name="achievements_array">
+        <item>Selections</item>
+        <item>Testimonials</item>
+    </string-array>
+    <string name="facebook">Facebook</string>
+    <string name="telegram">Telegram</string>
+    <string name="youtube">Youtube</string>
+    <string name="instagram">Instagram</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="twitter">Twitter</string>
+    <string name="zontech">ZONE TECH provides expert coaching for - Diploma and B Tech Level Govt. Engineering Competitive Exams like SSC (CPWD, MES, CWC, BRO, Farakka Barrage, Department of Post), DMRC, Indian Railways (RRB), NTPC, BHEL, DRDO, IOCL, SAIL, GAIL, ONGC, and other PSU’s. State J. En. Level Examinations like PHED, WRD, PWD, JMRC, Panchayati Raj and Other Examinations</string>
+    <string name="total_questions">%1$d\nQuestions</string>
+    <string name="mark_review">Mark for Review</string>
+    <string name="clear_response">Clear</string>
+    <string name="otp_message">One-Time Password (OTP) sent to your registered mobile number %1$s for validation of your mobile number.</string>
+    <string name="followus">Follow Us</string>
+    <string name="welcome_back">Welcome Back %1$s</string>
+    <string name="welcome_text">Welcome %1$s</string>
+    <string name="welcome_msg">Let\’s Start your preparation with Zone Tech.\nUse ZT15AUG20 Promo Code to avail 15% Discount for Any Online Course.</string>
+    <string name="price_item_value">%1$s %2$s</string>
+    <string name="title_activity_new_profile">New Profile Activity</string>
+    <string name="promo_code_title">Apply Promo Code, if you have any</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="unlock_confirm_accept">OK</string>
+    <string name="unlock_confirm_deny">No</string>
+    <string name="perm_readexternal_why_we_need_message">Read external permission is needed by Zone Tech for photo upload. Without this permission, you will not be able to set your photo from your phone.</string>
+    <string name="perm_readexternal_go_to_settings_message">Kindly provide \' Read external permission\' from the \'App permissions settings\'. Photo upload from phone will not be able to work without this permission.</string>
+    <string name="picked_no_image">You have not chosen any photo</string>
+    <string name="pick_image_intent_chooser_title">Select photo</string>
+    <string name="title_activity_contact_us">Contact Us</string>
+    <string name="perm_write_external_storage_why_we_need_message">External Storage permission is needed by Zone Tech for pdf stored in device. Without this permission, you will not be able to download and view pdf.</string>
+    <string name="perm_write_external_storage_go_to_settings_message">Kindly provide \'Storage Permission\' from the \'App permissions settings\'. You will not be able to download and view pdf.</string>
+
+
+    <string name="firstSpeed">0.5x</string>
+    <string name="normal">Normal</string>
+    <string name="second_speed">1.25x</string>
+    <string name="third_speed">1.5x</string>
+    <string name="four_speed">2x</string>
+    <string name="play_speed">Speed</string>
+    <string name="video_quality">Video Quality</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="tab_video_online">ONLINE</string>
+    <string name="tab_video_offline">DOWNLOADED</string>
+    <string name="plan_price_item_value">%1$s %2$s(%3$s off) Validity:%4$d Days</string>
+    <string name="cart_plan_price">%1$s %2$s (%3$s Off) Validity:%4$d Days</string>
+    <string name="offer_text">Renew your package with in %1$d days and get extra discount upto</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>

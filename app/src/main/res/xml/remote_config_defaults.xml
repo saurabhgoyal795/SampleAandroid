@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>releasePriority</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>inAppUpdate</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>customExtractorEnabled</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>remoteConfigTime</key>
+        <value>3600</value>
+    </entry>
+    <entry>
+        <key>customExtractorBaseUrl</key>
+        <value>www.youtube.com/get_video_info?html5=1&amp;c=TVHTML5&amp;cver=6.20180913&amp;video_id=</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->
