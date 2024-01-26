@@ -23,6 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zonetech.online.R;
 import com.zonetech.online.classes.ClassProductItemAdapter;
 import com.zonetech.online.common.ZTAppCompatActivity;
+import com.zonetech.online.dailyQuiz.DailyQuizActvity;
 import com.zonetech.online.payment.CartActivity;
 import com.zonetech.online.preferences.Preferences;
 import com.zonetech.online.server.ServerApi;
@@ -81,19 +82,14 @@ public class FreeClassPackageDetailsActivity extends ZTAppCompatActivity impleme
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(FreeClassPackageDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackagesNewTask(FreeClassPackageDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackagesNewTask(FreeClassPackageDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(FreeClassPackageDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(FreeClassPackageDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackagesNewTask(FreeClassPackageDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackagesNewTask(FreeClassPackageDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(FreeClassPackageDetailsActivity.this);
                 }
                 return false;
             }
@@ -258,8 +254,7 @@ public class FreeClassPackageDetailsActivity extends ZTAppCompatActivity impleme
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buyButton:
+        if (v.getId() == R.id.buyButton){
                 JSONObject params = new JSONObject();
                 try{
                     params.put("PlanID", itemObj.optInt("OrgPlanID"));
@@ -281,7 +276,6 @@ public class FreeClassPackageDetailsActivity extends ZTAppCompatActivity impleme
                         Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
                     }
                 });
-                break;
         }
     }
 

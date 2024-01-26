@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
+import com.zonetech.online.freecourses.FreeClassPackageDetailsActivity;
 import com.zonetech.online.utils.Utils;
 
 import java.io.File;
@@ -42,19 +43,12 @@ public class MyDownloadActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(MyDownloadActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(MyDownloadActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                       // Utils.openDownloadsNewTask(MyDownloadActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(MyDownloadActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(MyDownloadActivity.this, 1);
                 }
                 return false;
             }

@@ -22,6 +22,7 @@ import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
 import com.zonetech.online.mypackage.MyPackageActivity;
 import com.zonetech.online.publication.PublicationActivity;
+import com.zonetech.online.testseries.TestSeriesPlanActivity;
 import com.zonetech.online.utils.CompleteListener;
 import com.zonetech.online.utils.Utils;
 import com.zonetech.online.views.AnimationListener;
@@ -43,19 +44,14 @@ public class ClassPackagePlanActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(ClassPackagePlanActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(ClassPackagePlanActivity.this,1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(ClassPackagePlanActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(ClassPackagePlanActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(ClassPackagePlanActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(ClassPackagePlanActivity.this);
                 }
                 return false;
             }
@@ -91,8 +87,7 @@ public class ClassPackagePlanActivity extends ZTAppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.filter:
+        if (item.getItemId() == R.id.filter){
                 showMenuOptions(findViewById(R.id.filter));
                 return true;
         }

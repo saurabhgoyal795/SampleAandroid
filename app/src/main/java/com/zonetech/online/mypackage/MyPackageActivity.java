@@ -32,6 +32,7 @@ import android.view.animation.DecelerateInterpolator;
 
 import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
+import com.zonetech.online.mypackage.onlineClass.ClassVideoListActivity;
 import com.zonetech.online.publication.PublicationActivity;
 import com.zonetech.online.remoteConfig.RemoteConfig;
 import com.zonetech.online.utils.Utils;
@@ -62,19 +63,14 @@ public class MyPackageActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        viewPager.setCurrentItem(0);
-                        break;
-                    case R.id.navigation_test:
-                        viewPager.setCurrentItem(1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(MyPackageActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    viewPager.setCurrentItem(0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    viewPager.setCurrentItem(1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(MyPackageActivity.this);
                 }
                 return false;
             }

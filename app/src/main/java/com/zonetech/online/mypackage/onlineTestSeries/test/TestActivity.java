@@ -349,42 +349,37 @@ public class TestActivity extends ZTAppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.progressBar:
-                return;
-            case R.id.leftButton:
-                if (leftState.equalsIgnoreCase(leftButtonState.PREVIOUS.toString())) {
-                    if(mCurrentFragment != null){
-                        mCurrentFragment.showQuestion("previous");
-                    }
-                } else if (leftState.equalsIgnoreCase(leftButtonState.INSTRUCTIONS.toString())) {
-                    leftState = leftButtonState.CLOSE.toString();
-                    righState = rightButtonState.RESUME.toString();
-                    setButtonText();
-                    showInstructionScreen();
-                } else {
-                    onBackPressed();
+        if (v.getId() ==  R.id.leftButton) {
+            if (leftState.equalsIgnoreCase(leftButtonState.PREVIOUS.toString())) {
+                if (mCurrentFragment != null) {
+                    mCurrentFragment.showQuestion("previous");
                 }
-                break;
-            case R.id.rightButton:
-                if(righState.equalsIgnoreCase(rightButtonState.RESULT.toString())){
-                    showResult();
-                }else if (righState.equalsIgnoreCase(rightButtonState.SUBMIT.toString())) {
-                    showConfirmDialog(true);
-                } else if (righState.equalsIgnoreCase(rightButtonState.START.toString())
-                || righState.equalsIgnoreCase(rightButtonState.RESUME.toString())) {
-                    if (sectionList == null || sectionList.size() == 0) {
-                        startExam();
-                    } else {
-                        startTest();
-                    }
+            } else if (leftState.equalsIgnoreCase(leftButtonState.INSTRUCTIONS.toString())) {
+                leftState = leftButtonState.CLOSE.toString();
+                righState = rightButtonState.RESUME.toString();
+                setButtonText();
+                showInstructionScreen();
+            } else {
+                onBackPressed();
+            }
+        }else if (v.getId() == R.id.rightButton) {
+            if (righState.equalsIgnoreCase(rightButtonState.RESULT.toString())) {
+                showResult();
+            } else if (righState.equalsIgnoreCase(rightButtonState.SUBMIT.toString())) {
+                showConfirmDialog(true);
+            } else if (righState.equalsIgnoreCase(rightButtonState.START.toString())
+                    || righState.equalsIgnoreCase(rightButtonState.RESUME.toString())) {
+                if (sectionList == null || sectionList.size() == 0) {
+                    startExam();
                 } else {
-                    if(mCurrentFragment != null){
-                        mCurrentFragment.showQuestion("next");
-                    }
+                    startTest();
                 }
-                break;
-        }
+            } else {
+                if (mCurrentFragment != null) {
+                    mCurrentFragment.showQuestion("next");
+                }
+            }
+    }
     }
 
     private void startQuestionTimer() {
@@ -569,8 +564,7 @@ public class TestActivity extends ZTAppCompatActivity implements View.OnClickLis
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.more:
+        if (item.getItemId() == R.id.more){
 //                showMenuOptions(findViewById(R.id.more));
                 if(findViewById(R.id.questionNumberLayout).getVisibility() == View.VISIBLE){
                     hideQuestionNumberLayout();

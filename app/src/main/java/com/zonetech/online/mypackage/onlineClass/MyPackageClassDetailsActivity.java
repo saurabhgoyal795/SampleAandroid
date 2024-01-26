@@ -77,19 +77,14 @@ public class MyPackageClassDetailsActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(MyPackageClassDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(MyPackageClassDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(MyPackageClassDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(MyPackageClassDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(MyPackageClassDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(MyPackageClassDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(MyPackageClassDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(MyPackageClassDetailsActivity.this);
                 }
                 return false;
             }

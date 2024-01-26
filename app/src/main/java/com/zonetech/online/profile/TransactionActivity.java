@@ -30,19 +30,14 @@ public class TransactionActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(TransactionActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(TransactionActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(TransactionActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(TransactionActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(TransactionActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(TransactionActivity.this);
                 }
                 return false;
             }

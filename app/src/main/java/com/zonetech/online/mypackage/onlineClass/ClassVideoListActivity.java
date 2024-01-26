@@ -114,19 +114,14 @@ public class ClassVideoListActivity extends ZTAppCompatActivity{
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(ClassVideoListActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(ClassVideoListActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(ClassVideoListActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(ClassVideoListActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(ClassVideoListActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(ClassVideoListActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(ClassVideoListActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(ClassVideoListActivity.this);
                 }
                 return false;
             }

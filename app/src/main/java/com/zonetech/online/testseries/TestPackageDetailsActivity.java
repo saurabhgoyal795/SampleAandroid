@@ -84,19 +84,14 @@ public class TestPackageDetailsActivity extends ZTAppCompatActivity implements V
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(TestPackageDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackagesNewTask(TestPackageDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackagesNewTask(TestPackageDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(TestPackageDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(TestPackageDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(TestPackageDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(TestPackageDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(TestPackageDetailsActivity.this);
                 }
                 return false;
             }
@@ -200,8 +195,7 @@ public class TestPackageDetailsActivity extends ZTAppCompatActivity implements V
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buyButton:
+        if  (v.getId() == R.id.buyButton){
                 startPayment();
         }
     }

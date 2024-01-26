@@ -626,13 +626,13 @@ public class CustomUIYouTubePlayerFragment extends YouTubePlayerFragment impleme
         public void setPlayPauseButtonState(int state) {
             switch (state) {
                 case PlayPauseButtonState.PLAY:
-                    playPauseButton.setImageResource(R.drawable.exo_icon_play);
+//                    playPauseButton.setImageResource(R.drawable.exo_icon_play);
                     break;
                 case PlayPauseButtonState.PAUSE:
-                    playPauseButton.setImageResource(R.drawable.exo_icon_pause);
+//                    playPauseButton.setImageResource(R.drawable.exo_icon_pause);
                     break;
                 case PlayPauseButtonState.REPLAY:
-                    playPauseButton.setImageResource(R.drawable.exo_icon_play);
+//                    playPauseButton.setImageResource(R.drawable.exo_icon_play);
                     break;
                 default:
                     logWrapper.w(TAG, "Value passed into setPlayPauseButtonState was not a valid state constant. Value passed in: %d", state);

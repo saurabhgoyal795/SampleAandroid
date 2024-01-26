@@ -106,32 +106,25 @@ public class LoginActivity extends ZTAppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         hideKeyboard();
-        switch (v.getId()) {
-            case R.id.passwordVisibleIcon:
-                togglePasswordVisiblity();
-                break;
-            case R.id.contentView:
-                hideKeyboard();
-                break;
-            case R.id.resendOTP:
-                stopTimer();
-                otpGenerateRequest();
-                break;
-            case R.id.progressBar:
-                return;
-            case R.id.signIn:
-                setLoginLayout();
-                break;
-            case R.id.newUser:
-            case R.id.newUserOTP:
-                setNewUserLayout();
-                break;
-            case R.id.forgetPassword:
-                forgetPassword();
-                break;
-            case R.id.loginButton:
-                loginButtonClicked();
-                break;
+        if  (v.getId() == R.id.passwordVisibleIcon) {
+            togglePasswordVisiblity();
+        } else if  (v.getId() == R.id.contentView) {
+            hideKeyboard();
+        }else if  (v.getId() == R.id.resendOTP) {
+            stopTimer();
+            otpGenerateRequest();
+        } else if  (v.getId() == R.id.progressBar) {
+
+        } else if  (v.getId() == R.id.signIn) {
+            setLoginLayout();
+        } else if  (v.getId() == R.id.newUser) {
+            setNewUserLayout();
+        } else if  (v.getId() == R.id.newUserOTP) {
+            setNewUserLayout();
+        } else if  (v.getId() == R.id.forgetPassword) {
+            forgetPassword();
+        } else if  (v.getId() == R.id.loginButton) {
+            loginButtonClicked();
         }
     }
 

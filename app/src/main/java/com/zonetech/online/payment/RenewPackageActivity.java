@@ -137,22 +137,22 @@ public class RenewPackageActivity extends ZTAppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.offer:
-                offer();
-                break;
-            case R.id.applyPromoCode:
-                applyPromoCode();
-                break;
-            case R.id.removeCode:
-                showPromoCode();
-                break;
-            case R.id.progressBar:
-                return;
-            case R.id.payButton:
-                payButtonClicked();
-                break;
-        }
+//        switch (v.getId()){
+//            case R.id.offer:
+//                offer();
+//                break;
+//            case R.id.applyPromoCode:
+//                applyPromoCode();
+//                break;
+//            case R.id.removeCode:
+//                showPromoCode();
+//                break;
+//            case R.id.progressBar:
+//                return;
+//            case R.id.payButton:
+//                payButtonClicked();
+//                break;
+//        }
     }
     private void payButtonClicked(){
         findViewById(R.id.progressBar).setVisibility(View.VISIBLE);

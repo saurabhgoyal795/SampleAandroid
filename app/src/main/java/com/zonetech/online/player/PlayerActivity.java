@@ -83,7 +83,7 @@ public class PlayerActivity extends ZTAppCompatActivity {
         webView = findViewById(R.id.webView);
         nativePlayer = findViewById(R.id.nativePlayer);
         videoProgress = findViewById(R.id.videoProgress);
-        PlayerControlView controlView = nativePlayer.findViewById(R.id.exo_controller);
+        PlayerControlView controlView = nativePlayer.findViewById(com.google.android.exoplayer2.R.id.exo_controller);
         mFullScreenIcon = controlView.findViewById(R.id.exo_fullscreen_icon);
         exoSetting = controlView.findViewById(R.id.exo_setting);
         metrics = Utils.getMetrics(this);

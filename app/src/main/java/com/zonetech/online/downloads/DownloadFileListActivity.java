@@ -37,20 +37,20 @@ public class DownloadFileListActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(DownloadFileListActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(DownloadFileListActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                         onBackPressed();
-                         break;
-                }
+//                switch (item.getItemId()){
+//                    case R.id.navigation_home:
+//                        onBackPressed();
+//                        break;
+//                    case R.id.navigation_classes:
+//                        Utils.openMyPackages(DownloadFileListActivity.this, 0);
+//                        break;
+//                    case R.id.navigation_test:
+//                        Utils.openMyPackages(DownloadFileListActivity.this, 1);
+//                        break;
+//                    case R.id.navigation_profile:
+//                         onBackPressed();
+//                         break;
+//                }
                 return false;
             }
         });

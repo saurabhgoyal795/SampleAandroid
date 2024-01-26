@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.zonetech.online.ContactUsActivity;
 import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
 import com.zonetech.online.publication.PublicationActivity;
@@ -60,19 +61,14 @@ public class MyPackageClassVideoActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(MyPackageClassVideoActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(MyPackageClassVideoActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(MyPackageClassVideoActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(MyPackageClassVideoActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(MyPackageClassVideoActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(MyPackageClassVideoActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(MyPackageClassVideoActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(MyPackageClassVideoActivity.this);
                 }
                 return false;
             }

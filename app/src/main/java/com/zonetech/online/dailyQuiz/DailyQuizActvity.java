@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
+import com.zonetech.online.profile.NewProfileActivity;
+import com.zonetech.online.profile.TransactionActivity;
 import com.zonetech.online.publication.PublicationActivity;
 import com.zonetech.online.server.ServerApi;
 import com.zonetech.online.utils.Utils;
@@ -31,20 +33,16 @@ public class DailyQuizActvity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(DailyQuizActvity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(DailyQuizActvity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(DailyQuizActvity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(DailyQuizActvity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(DailyQuizActvity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(DailyQuizActvity.this);
                 }
+
                 return false;
             }
         });

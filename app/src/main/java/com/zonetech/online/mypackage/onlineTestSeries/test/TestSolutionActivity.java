@@ -127,8 +127,7 @@ public class TestSolutionActivity extends ZTAppCompatActivity implements View.On
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.more:
+        if (item.getItemId() == R.id.more) {
                 if(findViewById(R.id.questionNumberLayout).getVisibility() == View.VISIBLE){
                     hideQuestionNumberLayout();
                 }else {
@@ -204,19 +203,15 @@ public class TestSolutionActivity extends ZTAppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.progressBar:
-                return;
-            case R.id.leftButton:
-                if (leftState.equalsIgnoreCase(leftButtonState.PREVIOUS.toString())) {
-                    if(mCurrentFragment != null){
-                        mCurrentFragment.showQuestion("previous");
-                    }
-                }else{
-                    onBackPressed();
+        if (v.getId() == R.id.leftButton) {
+            if (leftState.equalsIgnoreCase(leftButtonState.PREVIOUS.toString())) {
+                if (mCurrentFragment != null) {
+                    mCurrentFragment.showQuestion("previous");
                 }
-                break;
-            case R.id.rightButton:
+            } else {
+                onBackPressed();
+            }
+        } else if (v.getId() ==R.id.rightButton){
                 if(righState.equalsIgnoreCase(rightButtonState.NEXT.toString())) {
                     if (mCurrentFragment != null) {
                         mCurrentFragment.showQuestion("next");
@@ -224,7 +219,6 @@ public class TestSolutionActivity extends ZTAppCompatActivity implements View.On
                 } else {
                     onBackPressed();
                 }
-                break;
         }
     }
 

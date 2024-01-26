@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.zonetech.online.common.ZTAppCompatActivity;
 import com.zonetech.online.home.MainActivity;
+import com.zonetech.online.login.LoginActivity;
 import com.zonetech.online.notification.NotificationScheduledWorker;
 import com.zonetech.online.server.DeepLinkActivity;
 import com.zonetech.online.utils.Utils;
@@ -39,7 +40,7 @@ public class SplashActivity extends ZTAppCompatActivity {
             intent.putExtra("url", link);
             startActivity(intent);
         }else {
-            Intent intent = new Intent(this, Utils.isLoginCompleted(this) ? MainActivity.class : InitialScreenActivity.class);
+            Intent intent = new Intent(this, Utils.isLoginCompleted(this) ? MainActivity.class : LoginActivity.class);
             startActivity(intent);
         }
         finish();

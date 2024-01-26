@@ -141,18 +141,12 @@ public class MainActivity extends ZTAppCompatActivity implements View.OnClickLis
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        break;
-                    case R.id.navigation_classes:
-                        openMyPackages( 0);
-                        break;
-                    case R.id.navigation_test:
-                        openMyPackages(1);
-                        break;
-                    case R.id.navigation_profile:
-                        openMyDownload();
-                        break;
+              if (item.getItemId() == R.id.navigation_classes) {
+                    openMyPackages( 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    openMyPackages(1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    openMyDownload();
                 }
                 return false;
             }
@@ -254,19 +248,18 @@ public class MainActivity extends ZTAppCompatActivity implements View.OnClickLis
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        switch (item.getItemId()) {
-            case R.id.whatsapp:
-                openWhatsApp();
-                return true;
-            case R.id.cart:
-                openCart();
-                return true;
-            case R.id.profile:
-                openProfile();
-                return true;
-            case R.id.notification:
-                 openNotification();
-                return true;
+        if (item.getItemId() == R.id.whatsapp) {
+            openWhatsApp();
+            return true;
+        } else if (item.getItemId() == R.id.cart) {
+            openCart();
+            return true;
+        } else if (item.getItemId() == R.id.profile) {
+            openCart();
+            return true;
+        } else if (item.getItemId() == R.id.notification) {
+            openNotification();
+            return true;
         }
         return (super.onOptionsItemSelected(item));
     }
@@ -519,37 +512,37 @@ public class MainActivity extends ZTAppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.userImage:
-                openProfile();
-                if (drawer.isDrawerOpen(GravityCompat.START)) {
-                    drawer.closeDrawer(GravityCompat.START);
-                }
-                break;
-            case R.id.facebook:
-                openFollowUs("facebook");
-                break;
-            case R.id.telegram:
-                openFollowUs("telegram");
-                break;
-            case R.id.youtube:
-                openFollowUs("youtube");
-                break;
-            case R.id.instagram:
-                openFollowUs("instagram");
-                break;
-            case R.id.linkedin:
-                openFollowUs("linkedin");
-                break;
-            case R.id.twitter:
-                openFollowUs("twitter");
-                break;
-            case R.id.cancel:
-                if(dialog != null){
-                    dialog.dismiss();
-                }
-                break;
-        }
+//        switch (v.getId()){
+//            case R.id.userImage:
+//                openProfile();
+//                if (drawer.isDrawerOpen(GravityCompat.START)) {
+//                    drawer.closeDrawer(GravityCompat.START);
+//                }
+//                break;
+//            case R.id.facebook:
+//                openFollowUs("facebook");
+//                break;
+//            case R.id.telegram:
+//                openFollowUs("telegram");
+//                break;
+//            case R.id.youtube:
+//                openFollowUs("youtube");
+//                break;
+//            case R.id.instagram:
+//                openFollowUs("instagram");
+//                break;
+//            case R.id.linkedin:
+//                openFollowUs("linkedin");
+//                break;
+//            case R.id.twitter:
+//                openFollowUs("twitter");
+//                break;
+//            case R.id.cancel:
+//                if(dialog != null){
+//                    dialog.dismiss();
+//                }
+//                break;
+//        }
     }
 
     public class ExpandableListAdapter extends BaseExpandableListAdapter {

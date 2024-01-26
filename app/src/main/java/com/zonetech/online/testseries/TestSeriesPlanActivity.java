@@ -22,6 +22,7 @@ import android.widget.RelativeLayout;
 
 import com.zonetech.online.R;
 import com.zonetech.online.common.ZTAppCompatActivity;
+import com.zonetech.online.freecourses.FreeCoursesActivity;
 import com.zonetech.online.home.MainActivity;
 import com.zonetech.online.mypackage.MyPackageActivity;
 import com.zonetech.online.utils.CompleteListener;
@@ -47,19 +48,15 @@ public class TestSeriesPlanActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(TestSeriesPlanActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(TestSeriesPlanActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(TestSeriesPlanActivity.this);
-                        break;
+
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(TestSeriesPlanActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(TestSeriesPlanActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(TestSeriesPlanActivity.this);
                 }
                 return false;
             }
@@ -98,8 +95,7 @@ public class TestSeriesPlanActivity extends ZTAppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.filter:
+        if (item.getItemId() == R.id.filter) {
                 showMenuOptions(findViewById(R.id.filter));
                 return true;
         }

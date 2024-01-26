@@ -96,20 +96,16 @@ public class ClassPackageDetailsActivity extends ZTAppCompatActivity implements 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(ClassPackageDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackagesNewTask(ClassPackageDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackagesNewTask(ClassPackageDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(ClassPackageDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(ClassPackageDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(ClassPackageDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(ClassPackageDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(ClassPackageDetailsActivity.this);
                 }
+
                 return false;
             }
         });
@@ -298,14 +294,12 @@ public class ClassPackageDetailsActivity extends ZTAppCompatActivity implements 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buyButton:
+        if (v.getId() ==  R.id.buyButton){
                 if(selectPlan != null){
                     buy(0, selectPlan.optInt("MRP"), selectPlan.optInt("Fees"), selectPlan.optInt("PlanDuration"));
                 }else{
                     buy(0, 0, 0, 0);
                 }
-                break;
         }
     }
     JSONObject selectPlan;

@@ -34,6 +34,7 @@ import com.zonetech.online.R;
 import com.zonetech.online.classes.ClassPackagePlanActivity;
 import com.zonetech.online.common.ZTAppCompatActivity;
 import com.zonetech.online.mypackage.MyPackageActivity;
+import com.zonetech.online.mypackage.onlineClass.ClassVideoListActivity;
 import com.zonetech.online.publication.PublicationActivity;
 import com.zonetech.online.utils.Utils;
 import com.zonetech.online.views.AnimationListener;
@@ -63,19 +64,14 @@ public class FreeCoursesActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        onBackPressed();
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(FreeCoursesActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(FreeCoursesActivity.this,1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(FreeCoursesActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(FreeCoursesActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(FreeCoursesActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(FreeCoursesActivity.this);
                 }
                 return false;
             }

@@ -41,6 +41,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.zonetech.online.R;
+import com.zonetech.online.classes.ClassPackageDetailsActivity;
 import com.zonetech.online.common.ZTAppCompatActivity;
 import com.zonetech.online.cropper.CropImage;
 import com.zonetech.online.cropper.CropImageView;
@@ -105,20 +106,16 @@ public class TestSeriesDetailsActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(TestSeriesDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackages(TestSeriesDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackages(TestSeriesDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(TestSeriesDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(TestSeriesDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(TestSeriesDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(TestSeriesDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(TestSeriesDetailsActivity.this);
                 }
+
                 return false;
             }
         });

@@ -79,20 +79,16 @@ public class FreeTestPackageDetailsActivity extends ZTAppCompatActivity implemen
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(FreeTestPackageDetailsActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackagesNewTask(FreeTestPackageDetailsActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackagesNewTask(FreeTestPackageDetailsActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(FreeTestPackageDetailsActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    Utils.openHome(FreeTestPackageDetailsActivity.this);
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackagesNewTask(FreeTestPackageDetailsActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackagesNewTask(FreeTestPackageDetailsActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(FreeTestPackageDetailsActivity.this);
                 }
+
                 return false;
             }
         });
@@ -214,20 +210,17 @@ public class FreeTestPackageDetailsActivity extends ZTAppCompatActivity implemen
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.freeDemo:
-                startDemoTest();
-                break;
-            case R.id.schedule:
-                if(Utils.isValidString(pdfPath)){
-                    Intent intent = new Intent(FreeTestPackageDetailsActivity.this, PdfOpenActivity.class);
-                    intent.putExtra("fileName", pdfPath);
-                    intent.putExtra("downloadPath", ServerApi.PDF_BASE_PATH);
-                    intent.putExtra("basePath", getFilesDir() + "/pdf/");
-                    startActivity(intent);
-                }
-                break;
-            case R.id.buyButton:
+        if (v.getId() ==  R.id.freeDemo) {
+            startDemoTest();
+        } else if(v.getId() ==  R.id.schedule) {
+            if (Utils.isValidString(pdfPath)) {
+                Intent intent = new Intent(FreeTestPackageDetailsActivity.this, PdfOpenActivity.class);
+                intent.putExtra("fileName", pdfPath);
+                intent.putExtra("downloadPath", ServerApi.PDF_BASE_PATH);
+                intent.putExtra("basePath", getFilesDir() + "/pdf/");
+                startActivity(intent);
+            }
+        } else if(v.getId() == R.id.buyButton){
                 JSONObject params = new JSONObject();
                 try{
                     params.put("PlanID", itemObj.optInt("OrgPlanID"));

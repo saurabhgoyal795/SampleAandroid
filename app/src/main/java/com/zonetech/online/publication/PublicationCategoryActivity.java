@@ -49,20 +49,16 @@ public class PublicationCategoryActivity extends ZTAppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        Utils.openHome(PublicationCategoryActivity.this);
-                        break;
-                    case R.id.navigation_classes:
-                        Utils.openMyPackagesNewTask(PublicationCategoryActivity.this, 0);
-                        break;
-                    case R.id.navigation_test:
-                        Utils.openMyPackagesNewTask(PublicationCategoryActivity.this, 1);
-                        break;
-                    case R.id.navigation_profile:
-                        Utils.openDownloadsNewTask(PublicationCategoryActivity.this);
-                        break;
+                if (item.getItemId() == R.id.navigation_home) {
+                    onBackPressed();
+                } else if (item.getItemId() == R.id.navigation_classes) {
+                    Utils.openMyPackages(PublicationCategoryActivity.this, 0);
+                } else if (item.getItemId() == R.id.navigation_test) {
+                    Utils.openMyPackages(PublicationCategoryActivity.this, 1);
+                } else if (item.getItemId() == R.id.navigation_profile) {
+                    Utils.openDownloadsNewTask(PublicationCategoryActivity.this);
                 }
+
                 return false;
             }
         });
